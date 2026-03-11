@@ -1,0 +1,13 @@
+@use "tokens" as *;
+
+:root {
+  --color-bg: #{$color-bg};
+  --color-surface: #{$color-surface};
+  --color-text: #{$color-text};
+  --color-text-strong: #{$color-text-strong};
+  --color-accent: #{$color-accent};
+  --color-border: #{$color-border};
+  --shadow-1: #{$shadow-1};
+  --navbar-height: #{$navbar-height};
+  --space-7: #{$space-7};
+}

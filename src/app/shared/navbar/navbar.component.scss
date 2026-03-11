@@ -1,0 +1,76 @@
+@use "tokens" as *;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+:host {
+  display: block;
+}
+
+.navbar {
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $space-6;
+  background: linear-gradient(180deg, $color-surface 0%, $color-bg 100%);
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-1;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.navbar-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: $space-7;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: $color-text;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  position: relative;
+  padding: 6px 0;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: $color-accent;
+  transition: width 160ms ease;
+}
+
+.navbar-links a:hover{
+  cursor: pointer;
+}
+.navbar-links a:hover,
+.navbar-links a:focus-visible {
+  color: $color-text-strong;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a:focus-visible::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 $space-4;
+  }
+
+  .navbar-links {
+    gap: $space-4;
+  }
+}
