@@ -1,0 +1,87 @@
+@use "tokens" as *;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+:host {
+  display: block;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.home {
+  min-height: calc(100dvh - #{$navbar-height});
+  display: grid;
+  place-items: center;
+
+}
+
+.home-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.logo img {
+  height: 130px;
+  width: auto;
+  display: block;
+}
+
+.subtitle {
+  font-size: 25px;
+  max-width: 1000px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-4;
+  flex-wrap: wrap;
+}
+
+.line button {
+  font-size: 16px;
+  padding: 24px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.line .button-1 {
+  background-color: $color-accent;
+  color: #fff;
+}
+
+.line .button-2 {
+  background-color: transparent;
+  border-color: $color-accent;
+  color: $color-accent;
+  font-weight: 500;
+}
+
+.details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: $space-7;
+  flex-wrap: wrap;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-2;
+  text-align: center;
+}
+
+.detail a {
+  display: block;
+}
+
+.detail a:first-child {
+  color: $color-accent;
+}

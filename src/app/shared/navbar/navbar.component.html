@@ -3,10 +3,10 @@
     <img src="assets/logo.png" alt="My App Logo" />
   </div>
   <ul class="navbar-links">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/projects">Projects</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
-    <li><a routerLink="/orcamento">Orçamento</a></li>
+    <li><a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="is-active">About</a></li>
+    <li><a routerLink="/projects" routerLinkActive="is-active">Projects</a></li>
+    <li><a routerLink="/contact" routerLinkActive="is-active">Contact</a></li>
+    <li><a class="is-cta" routerLink="/orcamento" routerLinkActive="is-active">Orçamento</a></li>
   </ul>
 </nav>
