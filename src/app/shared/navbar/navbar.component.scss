@@ -64,13 +64,43 @@
 }
 
 .navbar-links a.is-cta {
-  background: $color-accent;
+  z-index: 0;
   color: $color-text-strong;
   border-radius: 6px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.navbar-links a.is-cta::before,
+.navbar-links a.is-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  z-index: -1;
+  transform: none;
+}
+
+.navbar-links a.is-cta::before {
+  background: $color-accent;
 }
 
 .navbar-links a.is-cta::after {
-  display: none;
+  background: $color-accent;
+  opacity: 0;
+  filter: brightness(130%);
+  transition: opacity 0.25s ease;
+}
+
+.navbar-links a.is-cta:hover {
+  color: $color-text-strong;
+  transform: scale(1.05);
+}
+
+.navbar-links a.is-cta:hover::after {
+  opacity: 1;
 }
 
 .navbar-links a:hover{
